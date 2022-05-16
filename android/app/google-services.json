@@ -29,6 +29,13 @@
             {
               "client_id": "664089361291-4rp00ker05sq4rtfqr5l084158du70jn.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "664089361291-c9l9lq379e13qlui81kquo7t61ciu944.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todoFirebase"
+              }
             }
           ]
         }
