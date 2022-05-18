@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_firebase/frameworks/app_routes.dart' as routes;
-import 'package:todo_firebase/pages/login/controllers/login_controller.dart';
+import 'package:todo_firebase/pages/signup/controllers/signup_controller.dart';
 import 'package:todo_firebase/utils/validation_utils.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class SignupPage extends StatelessWidget {
+  const SignupPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final loginController = Get.find<LoginController>();
+    final signupController = Get.find<SignupController>();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
+      appBar: AppBar(title: const Text('Signup')),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Center(
           child: Form(
-            key: loginController.formKey,
+            key: signupController.formKey,
             child: Column(
               children: [
                 TextFormField(
-                  controller: loginController.emailController,
+                  controller: signupController.emailController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Email',
@@ -31,7 +30,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
                 TextFormField(
-                  controller: loginController.passwordController,
+                  controller: signupController.passwordController,
                   obscureText: true,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
@@ -44,22 +43,17 @@ class LoginPage extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: InkWell(
-                    onTap: () => Get.toNamed(routes.signupRoute),
+                    onTap: () => Get.back(),
                     child: const Text(
-                      'Sign up?',
+                      'Already have an account? Login',
                       style: TextStyle(color: Colors.blue),
                     ),
                   ),
                 ),
                 const SizedBox(height: 24),
                 ElevatedButton(
-                  onPressed: loginController.login,
-                  child: const Text('Login'),
-                ),
-                const SizedBox(height: 16),
-                ElevatedButton(
-                  onPressed: loginController.loginAnonymous,
-                  child: const Text('Login anonymous'),
+                  onPressed: signupController.signup,
+                  child: const Text('Signup'),
                 ),
               ],
             ),
