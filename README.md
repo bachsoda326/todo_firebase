@@ -1,6 +1,6 @@
 # todo_firebase
 
-A new Flutter project. Add text to test rebase.
+A new Flutter project.
 
 ## Getting Started
 
