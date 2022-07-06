@@ -2,6 +2,7 @@
 
 A new Flutter project.
 - From master
+- From test_rebase_2
 
 ## Getting Started
 
